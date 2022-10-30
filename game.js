@@ -31,8 +31,22 @@ function playRound(playerSelection, computerSelection) {
         
 }
 
+function game () {
+    // play five rounds
+    let k = 0;
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = "rock";
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+        k++;
+        
+    
+    }
+    return k
+}
+
+
+console.log(game())
+
   
    
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
