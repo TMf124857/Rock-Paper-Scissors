@@ -10,15 +10,24 @@ function getComputerChoice () {
 
 function playRound(playerSelection, computerSelection) {
     // your code here!
-    if (playerSelection === "rock") {
-        if (computerSelection === "paper") {
-            result = `You Lose! ${computerSelection} beats ${playerSelection}`;
-            return result;
-        } else {
-            result = `You Win! '${playerSelection} beats ${computerSelection}.`;
-            return result;  
+    const player = playerSelection.toLowerCase();
+    const computer = computerSelection.toLowerCase();
+    if (player === computer) {
+        result = `It is a tie`;
+        return result
+    } else {
+        if (player === "rock") {
+            if (computer === "paper") {
+                result = `You Lose! ${computer} beats ${player}`;
+                return result;
+            } else {
+                result = `You Win! ${player} beats ${computer}.`;
+                return result;  
+            }
         }
+
     }
+    
         
 }
 
